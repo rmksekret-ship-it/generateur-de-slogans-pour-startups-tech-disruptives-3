@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Slogans pour Startups Tech Disruptives | Boostez Votre Visibilité avec un Slogan Impactant</title>
+    <meta name="description" content="Produisez des slogans percutants et mémorables qui capturent l">
+    <style>
+        :root {
+            --color-primary: #007bff;
+            --color-secondary: #6c757d;
+            --color-accent: #28a745;
+            --color-text: #343a40;
+            --color-background: #f8f9fa;
+            --color-card-bg: rgba(255, 255, 255, 0.85);
+            --color-card-border: rgba(255, 255, 255, 0.2);
+            --color-glow: rgba(0, 123, 255, 0.3);
+            --font-family-display: 'Montserrat', sans-serif;
+            --font-family-body: 'Roboto', sans-serif;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: var(--font-family-body);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f2f7 0%, #c1d9e6 100%);
+            color: var(--color-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: var(--font-family-display);
+            font-size: 3.5em;
+            color: var(--color-primary);
+            text-shadow: 2px 2px 8px var(--color-glow);
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-family: var(--font-family-display);
+            font-size: 2em;
+            color: var(--color-text);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p.subtitle {
+            font-size: 1.2em;
+            color: var(--color-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 20px auto;
+            background: var(--color-card-bg);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--color-card-border);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: var(--color-text);
+            margin-bottom: 5px;
+            display: block;
+            font-family: var(--font-family-display);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(0, 123, 255, 0.3);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: var(--color-text);
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-glow);
+            background-color: white;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+            font-family: var(--font-family-display);
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #tool-result {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border: 1px solid var(--color-card-border);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+            min-height: 100px;
+        }
+
+        .result-group {
+            margin-bottom: 20px;
+        }
+
+        .result-group h3 {
+            font-family: var(--font-family-display);
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .result-group ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-group li {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 123, 255, 0.1);
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            font-size: 1.05em;
+            color: #333;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .result-group li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .seo-section {
+            background: #e9ecef;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid #ced4da;
+        }
+
+        .seo-section h2 {
+            color: var(--color-primary);
+            font-size: 2.2em;
+            margin-bottom: 25px;
+        }
+
+        .seo-section p {
+            max-width: 900px;
+            margin: 0 auto 15px auto;
+            color: #495057;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        .seo-section ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .seo-section li {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-card-border);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            color: var(--color-text);
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+            .container {
+                padding: 20px;
+                width: 95%;
+            }
+            button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+            .seo-section h2 {
+                font-size: 1.8em;
+            }
+            .seo-section p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://generateur-de-slogans-pour-startups-tech-disruptives-3.onrender.com">
+    <meta property="og:title" content="Générateur de Slogans pour Startups Tech Disruptives">
+    <meta property="og:description" content="Produisez des slogans percutants et mémorables qui capturent l">
+    <meta property="og:url" content="https://generateur-de-slogans-pour-startups-tech-disruptives-3.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Générateur de Slogans pour Startups Tech Disruptives", "description": "Produisez des slogans percutants et mémorables qui capturent l", "url": "https://generateur-de-slogans-pour-startups-tech-disruptives-3.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="generateur-de-slogans-pour-startups-tech-disruptives-3" data-runtime-mode="slogan_generator">
+    <header>
+        <h1>Le Slogan Qui Propulse Votre Startup</h1>
+        <p class="subtitle">Produisez des slogans percutants et mémorables qui capturent l'essence de votre innovation technologique et attirent l'attention des investisseurs et des utilisateurs.</p>
+    </header>
+
+    <div class="container">
+        <form id="tool-form">
+            <div class="form-group">
+                <label for="startupName">Nom de votre Startup (facultatif)</label>
+                <input type="text" id="startupName" placeholder="Ex: TerraNova, OmniFlow">
+            </div>
+
+            <div class="form-group">
+                <label for="coreActivity">Activité principale / Problème résolu</label>
+                <textarea id="coreActivity" required placeholder="Ex: Simplifier la gestion de projets pour les équipes distribuées, Optimiser la consommation d'énergie des bâtiments intelligents."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="uniqueSellingPoint">Votre Proposition de Valeur Unique / Différenciateur</label>
+                <textarea id="uniqueSellingPoint" required placeholder="Ex: Utilise l'IA pour prédire les pannes avant qu'elles n'arrivent, Interface utilisateur ultra-intuitive pour non-experts."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="targetAudience">Votre Public Cible</label>
+                <input type="text" id="targetAudience" placeholder="Ex: PME, Développeurs, Consommateurs soucieux de l'environnement.">
+            </div>
+
+            <button type="submit" id="tool-submit" data-affiliate-slot="slogan-generator-cta">Générer des Slogans Disruptifs</button>
+        </form>
+
+        <div id="tool-result">
+            <!-- Results will be displayed here -->
+            <p id="result-detail" style="text-align: center; color: var(--color-secondary);">Vos slogans apparaîtront ici après la génération.</p>
+        </div>
+    </div>
+
+    <section class="seo-section">
+        <h2>Boostez Votre Visibilité avec un Slogan Impactant</h2>
+        <p>Dans l'écosystème trépidant des startups tech françaises, un slogan mémorable n'est pas un luxe, c'est une nécessité. Il est le premier contact, le coup de foudre qui séduit investisseurs, partenaires et futurs clients. Notre générateur est conçu pour vous aider à forger cette première impression indélébile, en synthétisant votre vision et votre innovation en quelques mots percutants.</p>
+        <p>Que vous soyez à la recherche d'un slogan accrocheur pour votre pitch deck, votre site web, ou votre prochaine campagne marketing, cet outil est votre allié. Oubliez les heures de brainstorming infructueuses, et laissez l'intelligence artificielle vous proposer des options créatives et pertinentes, adaptées à la spécificité de votre secteur d'activité technologique.</p>
+        <ul>
+            <li>Slogan startup tech France</li>
+            <li>Générateur de slogans innovants</li>
+            <li>Trouver slogan startup disruptif</li>
+            <li>Idée slogan entreprise technologie</li>
+            <li>Slogan marketing startup IA</li>
+            <li>Créer slogan pour pitch investisseur</li>
+            <li>Meilleur slogan pour startup française</li>
+            <li>Slogan impactant pour innovation</li>
+            <li>Slogan court startup digital</li>
+            <li>Slogan qui attire investisseurs</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const startupName = document.getElementById('startupName').value.trim();
+            const coreActivity = document.getElementById('coreActivity').value.trim();
+            const uniqueSellingPoint = document.getElementById('uniqueSellingPoint').value.trim();
+            const targetAudience = document.getElementById('targetAudience').value.trim();
+            const resultDiv = document.getElementById('tool-result');
+
+            if (!coreActivity || !uniqueSellingPoint) {
+                resultDiv.innerHTML = '<p style="color: red; text-align: center;">Veuillez décrire l\'activité principale et la proposition de valeur unique.</p>';
+                return;
+            }
+
+            const namePrefix = startupName ? `${startupName}, ` : '';
+            const slogans = generateSlogans(startupName, coreActivity, uniqueSellingPoint, targetAudience);
+
+            let html = '';
+            for (const category in slogans) {
+                if (slogans[category].length > 0) {
+                    html += `<div class="result-group"><h3>${category}</h3><ul>`;
+                    slogans[category].forEach(slogan => {
+                        html += `<li>${slogan}</li>`;
+                    });
+                    html += `</ul></div>`;
+                }
+            }
+            resultDiv.innerHTML = html;
+        });
+
+        function generateSlogans(name, activity, usp, audience) {
+            const basePhrases = [
+                "L'avenir commence ici.",
+                "Redéfinir les possibles.",
+                "Innover, c'est notre moteur.",
+                "La technologie au service de l'humain.",
+                "Simplifier l'extraordinaire.",
+                "Donner vie à vos ambitions.",
+                "Révolutionner votre quotidien."
+            ];
+
+            const namePart = name ? `${name}: ` : '';
+            const shortName = name ? name.split(' ')[0] : 'Notre solution';
+
+            const generated = {
+                "Slogans Choc & Disruptifs": [],
+                "Slogans Clairs & Directs": [],
+                "Slogans Inspirants & Visionnaires": []
+            };
+
+            // Choc & Disruptifs
+            generated["Slogans Choc & Disruptifs"].push(`${namePart}${activity} ? Nous le réinventons. Radicalement.`);
+            generated["Slogans Choc & Disruptifs"].push(`${namePart}Oubliez les limites. ${shortName} les brise.`);
+            generated["Slogans Choc & Disruptifs"].push(`${namePart}La disruption est notre ADN. ${usp}.`);
+            generated["Slogans Choc & Disruptifs"].push(`${namePart}Au-delà de la tech, la révolution. Pour ${audience || 'vous'}.`);
+            generated["Slogans Choc & Disruptifs"].push(`${namePart}Votre problème d'hier, notre solution de demain. Impensable avant ${shortName}.`);
+
+
+            // Clairs & Directs
+            generated["Slogans Clairs & Directs"].push(`${namePart}${usp.split('.')[0]}. Simplifié.`);
+            generated["Slogans Clairs & Directs"].push(`${namePart}${activity}. Optimisé par ${shortName}.`);
+            generated["Slogans Clairs & Directs"].push(`${namePart}La solution intelligente pour ${activity}.`);
+            generated["Slogans Clairs & Directs"].push(`${namePart}Rendez ${activity.toLowerCase()} efficace avec ${shortName}.`);
+            generated["Slogans Clairs & Directs"].push(`${namePart}Nous transformons ${activity.toLowerCase()} pour ${audience || 'tous'}.`);
+
+            // Inspirants & Visionnaires
+            generated["Slogans Inspirants & Visionnaires"].push(`${namePart}Façonner le futur de ${activity.toLowerCase()} avec ${usp.split('.')[0]}.`);
+            generated["Slogans Inspirants & Visionnaires"].push(`${namePart}Propulser l'innovation. C'est l'essence de ${shortName}.`);
+            generated["Slogans Inspirants & Visionnaires"].push(`${namePart}Libérez votre potentiel. La tech par ${shortName}.`);
+            generated["Slogans Inspirants & Visionnaires"].push(`${namePart}Un monde meilleur grâce à ${shortName} et ${usp.toLowerCase()}.`);
+            generated["Slogans Inspirants & Visionnaires"].push(`${namePart}Imaginez. Innovons. ${shortName}.`);
+
+            // Add some variants based on base phrases and inputs
+            basePhrases.forEach(phrase => {
+                generated["Slogans Inspirants & Visionnaires"].push(`${namePart}${phrase} ${usp.split('.')[0]}.`);
+                if (Math.random() < 0.5) generated["Slogans Clairs & Directs"].push(`${namePart}Avec ${shortName}, ${phrase.toLowerCase().replace('.', '')} pour ${activity.toLowerCase().split(' ')[0]}.`);
+            });
+
+            return generated;
+        }
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
